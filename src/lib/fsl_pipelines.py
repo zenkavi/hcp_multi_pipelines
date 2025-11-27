@@ -317,7 +317,7 @@ def get_registration(exp_dir, output_dir, working_dir, result_dir, subject_list,
 						(selectfiles, warpall_stat, [('func2anat_transform', 'premat'), 
 							('anat2target_transform', 'field_file'), 
 							('stat', 'in_file')]), 
-						(warpall_cope, datasink, [('out_file', 'registration_fsl.@reg_map')])
+						(warpall_cope, datasink, [('out_file', 'registration_fsl.@reg_map')]),
 						(warpall_stat, datasink, [('out_file', 'registration_fsl.@reg_stat_map')])])
 
 	return registration
