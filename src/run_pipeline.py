@@ -1,14 +1,17 @@
-#python3
-#This script can be used to run fsl and spm pipelines with specific parameters. 
-#Use : python3 run_pipeline.py -e /srv/tempdd/egermani/hcp_pipelines/data/original -r /srv/tempdd/egermani/hcp_pipelines/data/derived -s '["100206"]' -o '["l1"]' -S 'SPM' -t '["MOTOR"]' -c '["rh"]' -f 8 -p 0 -h 'derivatives'
+#!/opt/miniconda-latest/envs/neuro/bin/python
+# This script can be used to run fsl and spm pipelines with specific parameters. 
+# Use : python run_pipeline.py -e /srv/tempdd/egermani/hcp_pipelines/data/original -r /srv/tempdd/egermani/hcp_pipelines/data/derived -s '["100206"]' -o '["l1"]' -S 'SPM' -t '["MOTOR"]' -c '["rh"]' -f 8 -p 0 -h 'derivatives'
 
-import random
-import os 
 from os.path import join as opj
 import sys
 import getopt
 import json
 import importlib
+import subprocess
+import sys
+
+# Install a single package
+subprocess.check_call([sys.executable, "-m", "pip", "install", "niflow-nipype1-workflows"])
 
 # import warnings filter
 from warnings import simplefilter
