@@ -7,11 +7,11 @@ import sys
 import getopt
 import json
 import importlib
-import subprocess
+# import subprocess
 import sys
 
 # Install a single package
-subprocess.check_call([sys.executable, "-m", "pip", "install", "niflow-nipype1-workflows"])
+# subprocess.check_call([sys.executable, "-m", "pip", "install", "niflow-nipype1-workflows"])
 
 # import warnings filter
 from warnings import simplefilter
